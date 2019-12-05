@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-func getLines(input string) []string {
+func getInputLines(input string) []string {
 	result := []string{}
 
-	for _, s := range strings.Split(input, "\r\n") {
+	for _, s := range strings.Split(input, "\n") {
 		result = append(result, s)
 	}
 
@@ -18,7 +18,7 @@ func getLines(input string) []string {
 
 func main() {
 	bytes, _ := ioutil.ReadFile("input.txt")
-	input := getLines(string(bytes))
+	input := getInputLines(string(bytes))
 
 	fmt.Println(input)
 }
